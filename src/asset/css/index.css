@@ -1,0 +1,17 @@
+html, body {
+	height: 99%;
+	background-color: #6F4E37;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 15%;
+	outline: 1px solid red;
+}
+
+.flex-container div {
+	flex: 1;
+	outline: 1px solid red;
+}
