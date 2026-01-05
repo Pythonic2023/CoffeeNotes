@@ -15,15 +15,30 @@ html, body {
 		linear-gradient(to right, orange, red) border-box;
 }
 
-#menu-button {
+.popuptext helloworld {
+	color: red;
+	#visibility: hidden;
+}
+
+.menu-button {
 	justify-self: start;
 	background: None;
 }
 
-#menu-button button {
+.menu-button button {
+	cursor: pointer;
 	background: none;
 	border: none;
 	width: 30px;
+}
+
+.menu-button .popuptext {
+	visibility: hidden;
+}
+
+.menu-button .show {
+	color: red;
+	visibility: visible;
 }
 
 #title {
@@ -40,3 +55,4 @@ html, body {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
