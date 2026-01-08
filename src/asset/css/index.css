@@ -15,30 +15,37 @@ html, body {
 		linear-gradient(to right, orange, red) border-box;
 }
 
-.popuptext helloworld {
-	color: red;
-	#visibility: hidden;
-}
-
 .menu-button {
 	justify-self: start;
-	background: None;
 }
 
 .menu-button button {
 	cursor: pointer;
 	background: none;
 	border: none;
-	width: 30px;
 }
 
-.menu-button .popuptext {
-	visibility: hidden;
+.modal-content {
+	background-color: red
 }
 
-.menu-button .show {
-	color: red;
-	visibility: visible;
+.close {
+	font-size: 28px;
+}
+
+#menu-modal {
+	display: none;
+	positition: fixed;
+	background-color: orange;
+	outline: 3px solid red;
+}
+
+.show_modal {
+	display: block;
+	height: 10vh;
+	width: 5vh;
+	outline: 1px solid red;
+	padding: 5px;
 }
 
 #title {
@@ -49,6 +56,7 @@ html, body {
 }
 
 #description {
+	outline: 1px solid red;
 	margin-top: 20vh;
 	text-align: center;
 	background: linear-gradient(to right, orange, red);
