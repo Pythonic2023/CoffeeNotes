@@ -25,27 +25,35 @@ html, body {
 	border: none;
 }
 
-.modal-content {
-	background-color: red
-}
-
 .close {
+	color: pink;
 	font-size: 28px;
 }
+
+.close:hover,
+.close:focus {
+	color: pink;
+	cursor: pointer;
+}
+
 
 #menu-modal {
 	display: none;
 	positition: fixed;
-	background-color: orange;
-	outline: 3px solid red;
+	margin-top: 5px;
+}
+
+.modal-content {
+	background-color: red;
 }
 
 .show_modal {
 	display: block;
-	height: 10vh;
-	width: 5vh;
-	outline: 1px solid red;
-	padding: 5px;
+	position: fixed;
+	border: 5px solid red;
+	border-radius: 15px;
+	height: 15vh;
+	width: 20vh;
 }
 
 #title {

@@ -6,3 +6,4 @@ btn.addEventListener('click', buttonClicked);
 
 const closeButton = document.querySelector(".close");
 closeButton.addEventListener('click', closeModal);
+

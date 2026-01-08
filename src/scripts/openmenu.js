@@ -9,6 +9,8 @@ export function buttonClicked(){
 export function closeModal(){
 	const modal = document.getElementById("menu-modal");
 	const span = document.getElementsByClassName("close")[0];
+	span.classList.add("close");
+	modal.classList.add("show_modal");
 	modal.style.display = "none";
 	console.log("closeModal found");
 }
