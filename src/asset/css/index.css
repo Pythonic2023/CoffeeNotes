@@ -26,13 +26,14 @@ html, body {
 }
 
 .close {
-	color: pink;
+	color: white;
+	color: orange;
 	font-size: 28px;
 }
 
 .close:hover,
 .close:focus {
-	color: pink;
+	color: white;
 	cursor: pointer;
 }
 
@@ -50,13 +51,14 @@ html, body {
 
 .modal-content {
 	height: 100%;
+	text-align: center;
 }
 
 .show_modal {
 	display: block;
 	position: fixed;
 	width: 25vh;
-	height: 25vh;
+	height: 20vh;
 }
 
 #title {
@@ -67,7 +69,6 @@ html, body {
 }
 
 #description {
-	outline: 1px solid red;
 	margin-top: 20vh;
 	text-align: center;
 	background: linear-gradient(to right, orange, red);
@@ -75,8 +76,14 @@ html, body {
 	-webkit-text-fill-color: transparent;
 }
 
-.modal-content p {
+.modal-content a {
+	font-size: 18px;
+	text-decoration: none;
 	background: linear-gradient(to right, orange, red);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.modal-content li {
+	padding: 5px;
 }
