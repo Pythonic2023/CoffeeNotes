@@ -10,7 +10,7 @@ html, body {
 	padding: 10px 20px;
 	border: 5px solid transparent;
 	border-radius: 15px;
-	background:
+       	background:
 		linear-gradient(black, black) padding-box,
 		linear-gradient(to right, orange, red) border-box;
 }
@@ -41,19 +41,22 @@ html, body {
 	display: none;
 	positition: fixed;
 	margin-top: 5px;
+	border: 5px solid transparent;
+	border-radius: 15px;
+	background:
+		linear-gradient(black, black) padding-box,
+		linear-gradient(to right, orange, red) border-box
 }
 
 .modal-content {
-	background-color: red;
+	height: 100%;
 }
 
 .show_modal {
 	display: block;
 	position: fixed;
-	border: 5px solid red;
-	border-radius: 15px;
-	height: 15vh;
-	width: 20vh;
+	width: 25vh;
+	height: 25vh;
 }
 
 #title {
@@ -72,3 +75,8 @@ html, body {
 	-webkit-text-fill-color: transparent;
 }
 
+.modal-content p {
+	background: linear-gradient(to right, orange, red);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
