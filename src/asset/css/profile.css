@@ -57,7 +57,7 @@ html, body {
 	display: block;
 	position: fixed;
 	width: 25vh;
-	height: 20vh;
+	height: 23vh;
 }
 
 #title {
@@ -68,13 +68,19 @@ html, body {
 	-webkit-text-fill-color: transparent;
 }
 
-#description {
+#welcome-message {
 	cursor: default;
-	margin-top: 20vh;
+	padding: 10px;
 	text-align: center;
 	background: linear-gradient(to right, orange, red);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+#welcome-message .user-grid {
+	font-size: large;
+	padding-top: 20px;
+    justify-self: center;
 }
 
 .modal-content a {
@@ -91,4 +97,29 @@ html, body {
 
 .modal-content li {
 	padding: 5px;
+}
+
+.user-grid {
+    display: grid;
+    width: 90vh;
+    height: 50vh;
+    grid-template-areas: 
+    "name email"
+    "location favorite-coffee";
+	grid-template-rows: auto;
+	grid-template-columns: auto;
+}
+
+.user-grid p {
+    background: linear-gradient(to right, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.user-grid > #name {
+	grid-area: name;
+}
+
+.user-grid > #email {
+	grid-area: email;
 }
