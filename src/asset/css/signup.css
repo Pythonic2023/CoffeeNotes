@@ -57,7 +57,7 @@ html, body {
 	display: block;
 	position: fixed;
 	width: 25vh;
-	height: 23vh;
+	height: 20vh;
 }
 
 #title {
@@ -68,19 +68,13 @@ html, body {
 	-webkit-text-fill-color: transparent;
 }
 
-#welcome-message {
+#description {
 	cursor: default;
-	padding: 10px;
+	margin-top: 20vh;
 	text-align: center;
 	background: linear-gradient(to right, orange, red);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-}
-
-#welcome-message .user-grid {
-	font-size: large;
-	padding-top: 20px;
-    justify-self: center;
 }
 
 .modal-content a {
@@ -99,26 +93,20 @@ html, body {
 	padding: 5px;
 }
 
-.user-grid {
+
+/* In the middle of creating a styled grid for signup form */
+.signup form {
     display: grid;
-    width: 90vh;
-    height: 50vh;
-    grid-template-areas: 
-    "name email"
-    "location favorite-coffee";
-	grid-template-rows: auto;
-	grid-template-columns: auto;
-	border: 5px solid transparent;
-	border-radius: 15px;
-	background:
-		linear-gradient(black, black) padding-box,
-		linear-gradient(to right, orange, red) border-box;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    height: 40vh;
+	justify-self: center;
+	justify-items: center;
+    outline: 1px solid red;   
 }
 
-.user-grid p {
-    background: linear-gradient(to right, orange, red);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-	margin-top: 10vh;
-}
 
+.signup label {
+	color: red;
+}

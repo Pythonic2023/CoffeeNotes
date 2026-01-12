@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+	<head>
+		<title>CoffeeNotes</title>
+		<link rel="stylesheet" href="asset/css/signup.css"> 
+		<script type="module" src="scripts/main.js"></script>
+	</head>
+
+	<body>
+		<div class=titlebar>
+			<div class=menu-button>
+				<button type="button" class=menu>
+					<img src="asset/images/icons/menu3_icon.svg">
+				</button>
+			</div>			
+			<div id=title>
+				<h1>Coffee Notes</h1>
+			</div>
+			<div></div>
+		</div>
+		<div id=menu-modal class=modal>
+			<div class=modal-content>
+				<span class=close>&times;</span>
+				<li><a href="profile.html">Profile</a></li>
+				<li><a href="#">My notes</a></li>
+				<li><a href="#">About</a></li>
+			</div>
+		</div>
+		<div class="signup">
+			<form id="signupform" action="signup.php">
+				<div class="firstname-group">
+                	<label for="firstname">First name</label>
+                	<input type="text" id="firstname" name="firstname" value="First">
+                </div>
+				<div class="lastname-group">
+					<label for="lastname">Last name</label>
+                	<input type="text" id="lastname" name="lastname" value="Last">
+                </div>
+				<div class="email-group">
+					<label for="email">Email</label>
+                	<input type="text" id="email" name="email" value="Email">
+                </div>
+				<div class="password-group">
+					<label for="password">Password</label>
+                	<input type="text" id="password" name="password" value="Password">
+                </div>
+				<div class="passwordtwo-group">
+					<label for="password">Confirm Password</label>
+                	<input type="text" id="confirmpassword" name="confirmpassword" value="confirmpassword">
+				</div>
+            </form>
+		</div>
+	</body>
+
+</html>
