@@ -93,20 +93,33 @@ html, body {
 	padding: 5px;
 }
 
-
-/* In the middle of creating a styled grid for signup form */
-.signup form {
-    display: grid;
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
-    height: 40vh;
+.signup {
+	margin-top: 20vh;
 	justify-self: center;
-	justify-items: center;
-    outline: 1px solid red;   
+    border: 5px solid transparent;
+	border-radius: 15px;
+	background: 
+		linear-gradient(black, black) padding-box,
+		linear-gradient(to right, orange, red) border-box; 
+	padding: 20px;
 }
 
+/* In the middle of creating a styled grid for signup form */
 
-.signup label {
-	color: red;
+#signupform {
+    display: grid;
+	grid-template-columns: .8fr 1fr;
+	row-gap: 20px;
+}
+
+#signupform label {
+	font-size: large;
+	background: linear-gradient(to right, orange, red);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#signupform input {
+	border-radius: 5px;
+	background-color: lightgrey;
 }
