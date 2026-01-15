@@ -17,7 +17,7 @@ services:
   php:
     build: ./php
     volumes:
-      - web_server:/var/www/html
+      - ./php:/var/www/html
     environment:
       - DB_HOST=database # The name of the service below
       - DB_NAME=myapp
