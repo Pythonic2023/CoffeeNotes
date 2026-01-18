@@ -1,6 +1,7 @@
 <?php 
-    $dbuser = "PLACEHOLDER";
-    $password = "PLACEHOLDER";
+    include 'credentials.php';
+    $dbuser = $dbusername;
+    $password = $dbuserpass;
 
     try {
         $conn = new PDO("mysql:host=webapp-database-1;dbname=myapp", $dbuser, $password );

@@ -5,7 +5,7 @@
 
 <main>	
 	<div class="signup">
-		<form id="signupform" action="submitsignup.php" method="POST">
+		<form id="signupform" action="/submitsignup.php" method="POST">
             <label for="firstname">First name</label>
             <input type="text" id="firstname" name="firstname">
 			<label for="lastname">Last name</label>
