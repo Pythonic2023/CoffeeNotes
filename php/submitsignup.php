@@ -6,7 +6,6 @@
     try {
         $conn = new PDO("mysql:host=webapp-database-1;dbname=myapp", $dbuser, $password );
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "connection success";
     } catch (PDOException $e) {
         echo "Connection failed: " . $e;
     }
@@ -26,6 +25,7 @@
         ];
 
         $stmt->execute($data); 
+        header("Location: http://127.0.0.1:8080/welcome.php");
     } catch (PDOException $e) {
         echo "Failed to submit data" . $e;
     }
