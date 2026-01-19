@@ -1,0 +1,130 @@
+html, body {
+	height: 99%;
+	background-color: black;
+}
+
+.titlebar {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	padding: 10px 20px;
+	border: 5px solid transparent;
+	border-radius: 15px;
+       	background:
+		linear-gradient(black, black) padding-box,
+		linear-gradient(to right, orange, red) border-box;
+}
+
+.menu-button {
+	justify-self: start;
+}
+
+.menu-button button {
+	cursor: pointer;
+	background: none;
+	border: none;
+}
+
+.close {
+	color: white;
+	color: orange;
+	font-size: 28px;
+}
+
+.close:hover,
+.close:focus {
+	cursor: pointer;
+}
+
+
+#menu-modal {
+	display: none;
+	positition: fixed;
+	margin-top: 5px;
+	border: 5px solid transparent;
+	border-radius: 15px;
+	background:
+		linear-gradient(black, black) padding-box,
+		linear-gradient(to right, orange, red) border-box
+}
+
+.modal-content {
+	height: 100%;
+	text-align: center;
+}
+
+.show_modal {
+	display: block;
+	position: fixed;
+	width: 25vh;
+	height: 20vh;
+}
+
+#title {
+	cursor: default;
+	justify-self: center;
+	background: linear-gradient(to right, orange, red);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#description {
+	cursor: default;
+	margin-top: 20vh;
+	text-align: center;
+	background: linear-gradient(to right, orange, red);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.modal-content a {
+	font-size: 18px;
+	text-decoration: none;
+	background: linear-gradient(to right, orange, red);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.modal-content a:hover {
+	cursor: pointer;
+}
+
+.modal-content li {
+	padding: 5px;
+}
+
+.login {
+	margin-top: 20vh;
+	justify-self: center;
+    border: 5px solid transparent;
+	border-radius: 15px;
+	background: 
+		linear-gradient(black, black) padding-box,
+		linear-gradient(to right, orange, red) border-box; 
+	padding: 20px;
+}
+
+/* In the middle of creating a styled grid for signup form */
+
+#loginform {
+    display: grid;
+	grid-template-columns: .8fr 1fr;
+	row-gap: 20px;
+}
+
+#loginform label {
+	font-size: large;
+	background: linear-gradient(to right, orange, red);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#loginform input {
+	border-radius: 5px;
+	background-color: lightgrey;
+}
+
+.buttondiv {
+	margin-top: 10px;
+	text-align: center;
+}
