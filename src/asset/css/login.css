@@ -128,3 +128,9 @@ html, body {
 	margin-top: 10px;
 	text-align: center;
 }
+
+.loginerror {
+	margin-top: 5px;
+	color: red;
+	text-align: center;
+}
