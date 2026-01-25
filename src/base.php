@@ -27,6 +27,7 @@
 			<div class=modal-content>
 				<span class=close>&times;</span>
 				<li><a href="index.php">Home</a></li>
+				<li><a href="login.php">Login</a></li>
 				<li><a href="profile.php">Profile</a></li>
 				<li><a href="signup.php">Sign up</a></li>
 				<li><a href="#">My notes</a></li>

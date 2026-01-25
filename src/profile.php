@@ -1,6 +1,10 @@
 <?php 
 	$pageCss = "profile.css";
 	include "base.php";
+
+	if (empty($_SESSION['id'])) {
+		echo "Please log in to see this page";
+	}
 ?>
 
 <main>

@@ -44,6 +44,12 @@
 
             if ($hashcheck) {
                 session_regenerate_id(true);
+                $retrieveid = "SELECT id FROM user WHERE email = :email";
+                $stmt = $conn->prepare($retrieveid);
+                $stmt->execute($data);
+                $id = $stmt->fetch(PDO::FETCH_ASSOC);
+                echo $id;
+                $_SESSION['id'] = $id;
                 $_SESSION['user'] = $user;
                 header("Location: http://localhost:8080/profile.php");
             }

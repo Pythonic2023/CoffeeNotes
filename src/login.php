@@ -9,9 +9,9 @@
     	<div class="login">
 		<form id="loginform" action="/php/userlogin.php" method="POST">
 			<label for="email">Email</label>
-            <input type="text" id="email" name="email">
+            <input type="text" id="email" name="email" required>
 			<label for="password">Password</label>
-			<input type="text" id="password" name="password">
+			<input type="password" id="password" name="password" required>
         </form>
 		<div class="loginerror">
 			<?php
