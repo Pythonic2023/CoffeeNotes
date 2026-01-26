@@ -6,6 +6,16 @@
 ?>
 
 <main>
+		<div class="loginrequired">
+			<p>
+				<?php
+					if (isset($_SESSION['loginrequired'])){
+						echo $_SESSION['loginrequired'];
+						unset($_SESSION['loginrequired']);
+					}
+				?>
+			</p>
+		</div>
     	<div class="login">
 		<form id="loginform" action="/php/userlogin.php" method="POST">
 			<label for="email">Email</label>

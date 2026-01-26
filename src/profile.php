@@ -1,9 +1,12 @@
 <?php 
+	ob_start();
+	session_start();
 	$pageCss = "profile.css";
 	include "base.php";
 
 	if (empty($_SESSION['id'])) {
-		echo "Please log in to see this page";
+		header("Location: http://127.0.0.1:8080/login.php");
+		$_SESSION['loginrequired'] = "Please login to see your profile";
 	}
 ?>
 
