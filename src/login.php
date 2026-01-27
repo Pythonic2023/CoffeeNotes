@@ -35,6 +35,6 @@
 				}
 			?>
 		</div>
-		<div class="buttondiv"><button type="submit" form="loginform">Create account</button></div>
+		<div class="buttondiv"><button type="submit" form="loginform">Log in</button></div>
 		</div>
 </main>
