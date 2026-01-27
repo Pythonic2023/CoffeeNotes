@@ -95,7 +95,7 @@ html, body {
 
 .login {
 	position: absolute;
-	margin-top: 15vh;
+	margin-top: 20vh;
 	justify-self: center;
     border: 5px solid transparent;
 	border-radius: 15px;
@@ -136,11 +136,17 @@ html, body {
 	text-align: center;
 }
 
+.loginrequired {
+	position: relative;
+	top: 8vh;
+}
+
 .loginrequired p {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 	font-size: larger;
 	background: linear-gradient(to right, orange, red);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	justify-items: center;
-	text-align: center;
 }
