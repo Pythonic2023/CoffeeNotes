@@ -11,7 +11,9 @@ services:
       - php
 
   php:
-    build: ./php
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - ./php:/var/www/php
       - ./src:/var/www/html
@@ -25,6 +27,7 @@ services:
     image: mysql:8.0
     volumes:
       - db_data:/var/lib/mysql
+      - ./init-db:/docker-entrypoint-initdb.d 
     environment:
       - MYSQL_ROOT_PASSWORD=${ROOT_DB_PASSWORD}
       - MYSQL_DATABASE=myapp
@@ -32,5 +35,6 @@ services:
       - MYSQL_PASSWORD=${USER_DB_PASSWORD}
 
 volumes:
+  init-db:
   db_data:
   web_server: 
