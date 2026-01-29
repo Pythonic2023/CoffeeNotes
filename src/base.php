@@ -30,7 +30,7 @@
 				<li><a href="login.php">Login</a></li>
 				<li><a href="profile.php">Profile</a></li>
 				<li><a href="signup.php">Sign up</a></li>
-				<li><a href="#">My notes</a></li>
+				<li><a href="notes.php">My notes</a></li>
 				<li><a href="#">About</a></li>
 			</div>
 		</div>

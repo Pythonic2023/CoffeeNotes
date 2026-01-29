@@ -1,0 +1,15 @@
+main {
+    justify-items: center;
+}
+
+.notecontainer {
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: 15vh;
+}
+
+.notecontainer label {
+    background: linear-gradient(to right, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
