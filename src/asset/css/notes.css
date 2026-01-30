@@ -7,8 +7,7 @@ main {
     grid-template-columns: auto;
     margin-top: 15vh;
     justify-items: center;
-    outline: 1px solid red;
-}
+    }
 
 .notecontainer label {
     background: linear-gradient(to right, orange, red);
@@ -16,6 +15,26 @@ main {
     -webkit-text-fill-color: transparent;
 }
 
-.notecontainer textarea {
-    margin-top: 15px;
+.notecontainer #notetitle {
+    border: 5px solid transparent;
+    border-radius: 10px;
+    width: 25vw;
+    height: 20px;
+}
+
+.notecontainer #notetitlelabel {
+    font-size: 30px;
+}
+
+.notecontainer #notetextlabel {
+    font-size: 25px;
+}
+
+.notecontainer #notetext {
+    border: 5px solid transparent;
+    border-radius: 10px;
+}
+
+.notecontainer #notetextdiv {
+    margin-top: 10px;
 }
