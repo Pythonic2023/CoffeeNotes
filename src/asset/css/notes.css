@@ -6,10 +6,16 @@ main {
     display: grid;
     grid-template-columns: auto;
     margin-top: 15vh;
+    justify-items: center;
+    outline: 1px solid red;
 }
 
 .notecontainer label {
     background: linear-gradient(to right, orange, red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.notecontainer textarea {
+    margin-top: 15px;
 }

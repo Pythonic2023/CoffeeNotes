@@ -18,12 +18,12 @@
 <main>
     <div class="notecontainer">
         <div>
-            <label for="title">Title</label>
-            <input type="text"  id="title" name="title">
+            <label for="notetitle">Title</label>
+            <input type="text"  id="notetitle" name="notetitle">
         </div>
         <div>
             <label for="note">Note</label>
-            <input type="text" id="note" name="note">
+            <textarea rows="30" cols="80" placeholder="Give me a note!"></textarea>
         </div>
     </div>
 </main>
