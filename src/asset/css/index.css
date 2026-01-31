@@ -57,7 +57,7 @@ html, body {
 	display: block;
 	position: fixed;
 	width: 25vh;
-	height: 20vh;
+	height: auto;
 }
 
 #title {
