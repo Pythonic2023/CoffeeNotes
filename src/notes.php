@@ -29,5 +29,10 @@
         <div>
             <textarea rows="30" cols="80" id="notetext" placeholder="Give me a note!"></textarea>
         </div>
+        <div>
+            <button type="button" id="addnote">
+                <img src="asset/images/icons/done_outline.svg">
+            </button>
+        </div>
     </div>
 </main>
