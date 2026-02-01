@@ -25,10 +25,10 @@
             <input type="text" id="notetitle" name="notetitle" placeholder="Give me a title!" required>
         </div>
         <div id="notetextdiv">
-            <label id="notetextlabel" for="notetext">Your note</label>
+            <label id="notetextlabel" for="notetext">Note</label>
         </div>
         <div>
-            <textarea rows="30" cols="80" id="notetext" placeholder="Give me a note!" name="note" require="required"></textarea>
+            <textarea rows="30" cols="80" id="notetext" placeholder="Give me a note!" name="note" required></textarea>
         </div>
         <div>
             <button type="submit" id="addnote">

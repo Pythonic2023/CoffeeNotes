@@ -1,5 +1,6 @@
 <?php
     ob_start();
+    session_start();
     include 'credentials.php';
     $dbuser = $dbusername;
     $password = $dbuserpass;
@@ -12,10 +13,32 @@
     }
 
     try {
-        $title = $_POST['notetitle'];
-        $note = $_POST['note'];
-        echo $title . " " . $note;
+        $email = $_SESSION['user']['email'];
+        $sqpuid = "SELECT id FROM user WHERE email = :email";
+        $data = [
+            'email' => $email   
+        ];
+        $prepstmt = $conn->prepare($sqpuid);
+        $prepstmt->execute($data);
+        $fetchedid = $prepstmt->fetch(PDO::FETCH_ASSOC);
+        if ($fetchedid) {
+            $sqlinsertnote = "INSERT INTO notes (title, content, parentid) VALUES (:title, :note, :parentid)";
+            $title = $_POST['notetitle'];
+            $note = $_POST['note'];
+
+            $data = [
+                'title' => $title,
+                'note' => $note,
+                'parentid' => $fetchedid['id']
+            ];
+
+            $prepinsert = $conn->prepare($sqlinsertnote);
+            $success = $prepinsert->execute($data);
+            if ($success) {
+                echo "Successfully inserted note";
+            }
+        }
     } catch (PDOException $e) {
-        echo "Failed retrieving note";
+        echo $e;
     }
 ?>

@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS user (
 
 -- Create a child table which will store a users notes. Link it to the users table using foreign key. 
 CREATE TABLE IF NOT EXISTS notes (
-    note_id AUTO_INCREMENT PRIMARY KEY,
+    note_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(50),
     content VARCHAR(5000),
     parentid INT,
