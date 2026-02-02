@@ -1,0 +1,10 @@
+main {
+    color: red;
+}
+
+.titlecontainer {
+    display: grid;
+    outline: 1px solid red;
+    justify-items: center;
+    width: 10vw;
+}
