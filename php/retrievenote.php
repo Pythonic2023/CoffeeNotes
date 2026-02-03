@@ -1,4 +1,5 @@
 <?php 
+    // File to fetch contents and pass on to readnote.php
     ob_start();
     include 'credentials.php';
     $dbuser = $dbusername;
@@ -12,19 +13,15 @@
     }
 
     try {
-        $uid = $_SESSION['id'];
-        $gettitlestmt = "SELECT title,note_id  FROM notes WHERE parentid = :parentid";
-
+        $retrievestmt = "SELECT title, content FROM notes WHERE id = :id";
+        $note = $_GET['id'];
         $data = [
-            'parentid' => $uid['id']
+            'id' => $note
         ];
-
-        $prepstmt = $conn->prepare($gettitlestmt);
-        $prepstmt->execute($data);
-        $retrievetitle = $prepstmt->fetchAll(PDO::FETCH_ASSOC);
-        
+        $preparedstmt = $conn->prepare($retrievestmt);
+        $preparedstmt->execute($data);
+        $notecontents = $preparedstmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
-        echo "Failed getting notes";
+        echo "failed"; // Fix all these with friendly error page through entire site.
     }
-
 ?>

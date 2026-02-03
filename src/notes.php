@@ -3,6 +3,7 @@
 
     $pageCss = "notes.css";
     include 'base.php';
+    require '../php/getnotes.php';
 
     // Array destructering, retrieves the values from keys and stores them in $vars
     ['name' => $username, 'email' => $email] = $_SESSION['user'];
@@ -15,7 +16,18 @@
 
 ?>
 
+
 <main>
+    
+    <div class="titlecontainer">
+        <?php foreach ($retrievetitle as $row): ?>
+            <a href="/readnote.php?id=<?php echo $row['note_id'] ?>"> 
+            <p class="note-titles">
+                <?php echo $row['title']; ?>
+            </p>
+            </a>
+        <?php endforeach; ?>
+    </div>
     <form action="/php/addnote.php" method="POST">
     <div class="notecontainer">
         <div>
