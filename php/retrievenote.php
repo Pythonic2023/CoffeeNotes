@@ -13,14 +13,14 @@
     }
 
     try {
-        $retrievestmt = "SELECT title, content FROM notes WHERE id = :id";
+        $retrievestmt = "SELECT title, content FROM notes WHERE note_id = :id";
         $note = $_GET['id'];
         $data = [
             'id' => $note
         ];
         $preparedstmt = $conn->prepare($retrievestmt);
         $preparedstmt->execute($data);
-        $notecontents = $preparedstmt->fetchAll(PDO::FETCH_ASSOC);
+        $notecontents = $preparedstmt->fetch(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         echo "failed"; // Fix all these with friendly error page through entire site.
     }
