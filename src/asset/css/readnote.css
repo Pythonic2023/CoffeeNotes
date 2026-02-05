@@ -3,7 +3,7 @@
     justify-self: center;
     justify-items: center;
     margin-top: 12vh;
-    width: 50vw;
+    width: 40vw;
     grid-template-columns: 1;
     row-gap: 15px;
 }
@@ -13,7 +13,7 @@
     width: fit-content;
     text-align: center;
     padding: 10px;
-    border: 5px solid transparent;
+    border: 3px solid transparent;
     border-radius: 15px;
     background: 
         linear-gradient(white) padding-box,

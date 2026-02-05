@@ -39,7 +39,6 @@ html, body {
 
 #menu-modal {
 	display: none;
-	positition: fixed;
 	margin-top: 5px;
 	border: 5px solid transparent;
 	border-radius: 15px;
@@ -92,4 +91,17 @@ html, body {
 
 .modal-content li {
 	padding: 5px;
+}
+
+#logoutbtndiv {
+	justify-self: end;
+}
+
+#logoutbtn {
+	background: none;
+	border: none;
+}
+
+#logoutbtn:hover {
+	cursor: pointer;
 }

@@ -21,7 +21,13 @@
 			<div id=title>
 				<h1>Coffee Notes</h1>
 			</div>
-			<div></div>
+			<div id="logoutbtndiv">
+				<form action="#">
+					<button type="button" id="logoutbtn">
+						<img src="asset/images/icons/logouticon.svg">
+					</button>
+				</form>
+			</div>
 		</div>
 		<div id=menu-modal class=modal>
 			<div class=modal-content>

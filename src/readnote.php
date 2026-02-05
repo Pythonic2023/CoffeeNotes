@@ -1,6 +1,10 @@
 <?php 
     session_start();
     
+    if (!isset($_SESSION['id'])) {
+        echo "please log in to view your notes";
+    }
+
     require '../php/retrievenote.php';
     $pageCss = 'readnote.css';
     include 'base.php';
