@@ -18,8 +18,6 @@
 		<div class=user-grid>
 			<div id="name"><p><?php echo $username?></p></div>
 			<div id="email"><p><?php echo $email?></p></div>
-			<div id="location"><p>Location</p></div>
-			<div id="favorite-coffee"><p>Favorite coffee</p></div>
 		</div>
 	</div>
 </main>

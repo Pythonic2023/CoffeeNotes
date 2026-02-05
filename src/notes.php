@@ -20,6 +20,7 @@
 <main>
     
     <div class="titlecontainer">
+        <h2>Saved notes</h2>
         <?php foreach ($retrievetitle as $row): ?>
             <a href="/readnote.php?id=<?php echo $row['note_id'] ?>"> 
             <p class="note-titles">

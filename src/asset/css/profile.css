@@ -1,7 +1,10 @@
 .user-grid {
     display: grid;
     width: 90vh;
-    height: 50vh;
+    margin-top: 10vh;
+    height: fit-content;
+    justify-self: center;
+    text-align: center;
     grid-template-areas: 
     "name email"
     "location favorite-coffee";
@@ -18,6 +21,6 @@
     background: linear-gradient(to right, orange, red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-	margin-top: 10vh;
+    padding: 50px;
 }
 

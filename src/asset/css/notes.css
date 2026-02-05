@@ -71,3 +71,14 @@ main {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 }
+
+.titlecontainer h2 {
+    background: 
+        linear-gradient(to right, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.note-titles {
+    font-size: 18px;
+}
