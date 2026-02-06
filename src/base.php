@@ -22,8 +22,11 @@
 				<h1>Coffee Notes</h1>
 			</div>
 			<div id="logoutbtndiv">
-				<form action="#">
-					<button type="button" id="logoutbtn">
+				<?php if (isset($_SESSION['user'])): ?>
+					<p> Hello </p>
+				<?php endif ?>
+				<form action="../php/logout.php" method="POST">
+					<button type="submit" id="logoutbtn">
 						<img src="asset/images/icons/logouticon.svg">
 					</button>
 				</form>

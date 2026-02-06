@@ -1,12 +1,15 @@
 <?php 
+    ob_start();
     session_start();
 
     $pageCss = "notes.css";
     include 'base.php';
     require '../php/getnotes.php';
 
-    // Array destructering, retrieves the values from keys and stores them in $vars
-    ['name' => $username, 'email' => $email] = $_SESSION['user'];
+    if (isset($_SESSION['user'])) {
+        // Array destructering, retrieves the values from keys and stores them in $vars
+        ['name' => $username, 'email' => $email] = $_SESSION['user'];
+    }
 
     // If session ID is empty then redirect to login page and ask user to log in.
 	if (empty($_SESSION['id'])) {
@@ -20,14 +23,16 @@
 <main>
     
     <div class="titlecontainer">
-        <h2>Saved notes</h2>
-        <?php foreach ($retrievetitle as $row): ?>
-            <a href="/readnote.php?id=<?php echo $row['note_id'] ?>"> 
-            <p class="note-titles">
-                <?php echo $row['title']; ?>
-            </p>
-            </a>
-        <?php endforeach; ?>
+        <?php if (isset($_SESSION['user'])): ?> 
+            <h2>Saved notes</h2>
+            <?php foreach ($retrievetitle as $row): ?>
+                <a href="/readnote.php?id=<?php echo $row['note_id'] ?>"> 
+                <p class="note-titles">
+                    <?php echo $row['title']; ?>
+                </p>
+                </a>
+            <?php endforeach; ?>
+        <?php endif ?>
     </div>
     <form action="/php/addnote.php" method="POST">
     <div class="notecontainer">

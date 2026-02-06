@@ -39,7 +39,6 @@
             $stmt = $conn->prepare($retrievehash);
             $stmt->execute($data);
             $hash = $stmt->fetch(PDO::FETCH_ASSOC);
-            print_r($hash);
             $hashcheck = password_verify($pass, $hash['password_hash']);
 
             if ($hashcheck) {
@@ -50,7 +49,7 @@
                 $id = $stmt->fetch(PDO::FETCH_ASSOC);
                 $_SESSION['id'] = $id;
                 $_SESSION['user'] = $user;
-                header("Location: http://localhost:8080/profile.php");
+                header("Location: http://127.0.0.1:8080/profile.php");
             }
             else {
                 $_SESSION['invalid_password'] = "Invalid password";

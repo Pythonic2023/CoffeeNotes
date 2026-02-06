@@ -94,6 +94,17 @@ html, body {
 }
 
 #logoutbtndiv {
+	width: 10vw;
+	justify-self: end;
+	outline: 1px solid red;
+}
+
+#logoutbtndiv p {
+	justify-self: start;
+	justify-items: center;
+}
+
+#logoutbtndiv > form {
 	justify-self: end;
 }
 
