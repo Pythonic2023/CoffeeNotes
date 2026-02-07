@@ -1,4 +1,5 @@
 <?php 
+    require_once 'userlogin.php';
     include 'credentials.php';
     $dbuser = $dbusername;
     $password = $dbuserpass;
@@ -25,9 +26,11 @@
         ];
 
         $stmt->execute($data); 
-        header("Location: http://127.0.0.1:8080/index.php");
     } catch (PDOException $e) {
         echo "Failed to submit data" . $e;
     }
+
+    $password = $_POST['password'];
+    verifyEmailPassword($conn, $email, $password);
 
 ?>

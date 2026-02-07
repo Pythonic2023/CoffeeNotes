@@ -1,4 +1,5 @@
 <?php 
+	session_start();
 	$pageCss = "signup.css";
 	include 'base.php';
 ?>
