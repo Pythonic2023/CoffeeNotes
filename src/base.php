@@ -20,16 +20,22 @@
 			</div>			
 			<div id=title>
 				<h1>Coffee Notes</h1>
-			</div>
+			</div>	
 			<div id="logoutbtndiv">
-				<?php if (isset($_SESSION['user'])): ?>
-					<p> Hello </p>
-				<?php endif ?>
-				<form action="../php/logout.php" method="POST">
-					<button type="submit" id="logoutbtn">
-						<img src="asset/images/icons/logouticon.svg">
-					</button>
-				</form>
+				<div id="titleflex" >
+					<div id="flexchildname" >
+						<?php if (isset($_SESSION['user'])): ?>
+							<p> Welcome, <?php echo $_SESSION['user']['name']?> </p>
+						<?php endif ?>
+					</div>
+					<div id="flexchildlogout">
+						<form action="../php/logout.php" method="POST">
+							<button type="submit" id="logoutbtn">
+								<img src="asset/images/icons/logouticon.svg">
+							</button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id=menu-modal class=modal>
