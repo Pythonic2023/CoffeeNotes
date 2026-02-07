@@ -25,7 +25,7 @@
         ];
 
         $stmt->execute($data); 
-        header("Location: http://127.0.0.1:8080/welcome.php");
+        header("Location: http://127.0.0.1:8080/index.php");
     } catch (PDOException $e) {
         echo "Failed to submit data" . $e;
     }

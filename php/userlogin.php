@@ -49,7 +49,7 @@
                 $id = $stmt->fetch(PDO::FETCH_ASSOC);
                 $_SESSION['id'] = $id;
                 $_SESSION['user'] = $user;
-                header("Location: http://127.0.0.1:8080/notes.php");
+                header("Location: http://127.0.0.1:8080/index.php");
             }
             else {
                 $_SESSION['invalid_password'] = "Invalid password";
