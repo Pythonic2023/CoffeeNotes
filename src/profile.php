@@ -7,7 +7,7 @@
 	['name' => $username, 'email' => $email] = $_SESSION['user'];
 
 	if (empty($_SESSION['id'])) {
-		header("Location: http://127.0.0.1:8080/login.php");
+		header("Location: /login.php");
 		$_SESSION['loginrequired'] = "Please login to see your profile";
 	}
 ?>
@@ -16,8 +16,8 @@
 	<div id=welcome-message>
 		<h2>Welcome, user</h2>
 		<div class=user-grid>
-			<div id="name"><p><?php echo $username?></p></div>
-			<div id="email"><p><?php echo $email?></p></div>
+			<div id="name"><p><?php echo convertstring($username) ?></p></div>
+			<div id="email"><p><?php echo convertstring($email) ?></p></div>
 		</div>
 	</div>
 </main>

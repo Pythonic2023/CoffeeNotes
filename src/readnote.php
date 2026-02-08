@@ -14,7 +14,7 @@
 
 <main>
     <div id="note-content">
-        <div class="note"> <?php echo $notecontents['title']; ?> </div>
-        <div class="note"> <?php echo $notecontents['content']; ?> </div>
+        <div class="note"> <?php echo convertstring($notecontents['title']); ?> </div>
+        <div class="note"> <?php echo convertstring($notecontents['content']); ?> </div>
     </div>
 </main>

@@ -4,6 +4,7 @@
 
     $pageCss = "notes.css";
     include 'base.php';
+    require_once '../php/functions.php';
     require '../php/getnotes.php';
 
     if (isset($_SESSION['user'])) {
@@ -13,7 +14,7 @@
 
     // If session ID is empty then redirect to login page and ask user to log in.
 	if (empty($_SESSION['id'])) {
-		header("Location: http://127.0.0.1:8080/login.php");
+		header("Location: /login.php");
 		$_SESSION['loginrequired'] = "Please login to see your notes";
 	}
 
@@ -28,7 +29,7 @@
             <?php foreach ($retrievetitle as $row): ?>
                 <a href="/readnote.php?id=<?php echo $row['note_id'] ?>"> 
                 <p class="note-titles">
-                    <?php echo $row['title']; ?>
+                    <?php echo convertstring($row['title']); ?>
                 </p>
                 </a>
             <?php endforeach; ?>

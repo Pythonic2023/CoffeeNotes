@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-
+	<?php 
+		session_start();
+		require_once '../php/functions.php';
+	?>
 	<head>
 		<title>CoffeeNotes</title>
 		<link rel="stylesheet" href="/asset/css/index.css">
@@ -25,7 +28,7 @@
 				<div id="titleflex" >
 					<div id="flexchildname" >
 						<?php if (isset($_SESSION['user'])): ?>
-							<p> Welcome, <?php echo $_SESSION['user']['name']?> </p>
+							<p> Welcome, <?php echo convertstring($_SESSION['user']['name'])?> </p>
 						<?php endif ?>
 					</div>
 					<div id="flexchildlogout">
