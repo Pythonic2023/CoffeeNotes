@@ -6,8 +6,13 @@ services:
     image: nginx:alpine
     container_name: webapp-server-1
     restart: unless-stopped
+    volumes:
+      - ./src:/var/www/html
+      - ./php:/var/www/php
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+
     ports:
-      - "80:80"
+      - "8080:80"
     depends_on:
       - php
 
@@ -16,6 +21,10 @@ services:
     build:
       context: .
       dockerfile: php.Dockerfile
+    restart: unless-stopped
+    volumes:
+     - ./src:/var/www/html
+     - ./php:/var/www/php
     environment:
       - DB_HOST=database # The name of the service below
       - DB_NAME=myapp
@@ -24,9 +33,11 @@ services:
 
   database:
     image: mysql:8.0
+    container_name: webapp-database-1
+    restart: unless-stopped
     volumes:
       - db_data:/var/lib/mysql
-      - ./init-db:/docker-entrypoint-initdb.d 
+      - ./init-db:/docker-entrypoint-initdb.d:ro 
     environment:
       - MYSQL_ROOT_PASSWORD=${ROOT_DB_PASSWORD}
       - MYSQL_DATABASE=myapp
@@ -36,4 +47,4 @@ services:
 volumes:
   init-db:
   db_data:
- 
+  web_static: 
