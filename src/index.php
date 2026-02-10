@@ -1,4 +1,4 @@
-<?php 
+<?php
 	session_start();
 	$pageCss = 'index.css';
 	include 'base.php';

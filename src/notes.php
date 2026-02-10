@@ -16,7 +16,7 @@
 	if (empty($_SESSION['id'])) {
 		header("Location: /login.php");
 		$_SESSION['loginrequired'] = "Please login to see your notes";
-	}
+    }
 
 ?>
 

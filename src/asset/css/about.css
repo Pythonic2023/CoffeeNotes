@@ -1,0 +1,30 @@
+.aboutgrid {
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: 10vh;
+    justify-self: center;
+    text-align: center;
+    width: 50vw;
+    border: 5px solid transparent;
+    border-radius: 15px;
+    background: 
+        linear-gradient(black) padding-box,
+        linear-gradient(to right, orange, red) border-box;
+}
+
+#about {
+    background: linear-gradient(to right, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#abouttext {
+    font-size: 21px;
+    background: linear-gradient(to right, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#abouttext p {
+    padding: 5px;
+}

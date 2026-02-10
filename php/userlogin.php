@@ -53,13 +53,13 @@
             }
             else {
                 $_SESSION['invalid_password'] = "Invalid password";
-                header("Location: http://127.0.0.1:8080/login.php");
+                header("Location: /login.php");
             }
         }
         // If user is not returned then print invalid email
         else {
             $_SESSION['invalid_email'] = "Invalid email";
-            header("Location: http://127.0.0.1:8080/login.php");
+            header("Location: /login.php");
         }
         
     }

@@ -35,7 +35,7 @@
             $prepinsert = $conn->prepare($sqlinsertnote);
             $success = $prepinsert->execute($data);
             if ($success) {
-                header("Location: http://127.0.0.1:8080/notes.php");
+                header("Location: /notes.php");
             }
         }
     } catch (PDOException $e) {
