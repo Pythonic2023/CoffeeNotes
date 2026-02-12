@@ -1,7 +1,18 @@
-<?php 
-    ob_start();
+<?php
     session_start();
+    ob_start();
+?>
 
+<script src="scripts/predicttext.js" defer></script>
+<script>
+    console.log('Loaded script');
+</script>
+
+<?php 
+    $script = ob_get_clean();
+?>
+
+<?php
     $pageCss = "notes.css";
     include 'base.php';
     require_once '../php/functions.php';
@@ -17,9 +28,7 @@
 		header("Location: /login.php");
 		$_SESSION['loginrequired'] = "Please login to see your notes";
     }
-
 ?>
-
 
 <main>
     
@@ -46,8 +55,13 @@
         <div id="notetextdiv">
             <label id="notetextlabel" for="notetext">Note</label>
         </div>
-        <div>
-            <textarea rows="30" cols="80" id="notetext" placeholder="Give me a note!" name="note" required></textarea>
+        <div class="container">
+            <div>
+                <textarea rows="30" cols="80" id="notetext" name="note" placeholder="Give me a note!" required></textarea>
+            </div>
+            <div>
+                <textarea rows="30" cols="80" id="shadowtext"></textarea>
+            </div>
         </div>
         <div>
             <button type="submit" id="addnote">

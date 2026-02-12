@@ -10,6 +10,8 @@
 			<link rel="stylesheet" href="/asset/css/<?php echo $pageCss; ?>">
 		<?php endif ?> 
 		
+		<?php if(isset($predictivescript)) echo $predictivescript ?>
+
 		<script type="module" src="scripts/main.js"></script>
 	</head>
 
@@ -51,7 +53,7 @@
 				<li><a href="about.php">About</a></li>
 			</div>
 		</div>
-        
+        <?php echo $script ?? ''; ?>
 	</body>
 
 </html>

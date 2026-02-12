@@ -4,6 +4,7 @@ main {
 
 .notecontainer {
     display: grid;
+    position: relative;
     grid-template-columns: auto;
     margin-top: 12vh;
     justify-items: center;
@@ -31,8 +32,11 @@ main {
 }
 
 .notecontainer #notetext {
+    position: relative;
     border: 5px solid transparent;
     border-radius: 10px;
+    z-index: 1;
+    background-color: transparent;
 }
 
 .notecontainer #notetextdiv {
@@ -81,4 +85,16 @@ main {
 
 .note-titles {
     font-size: 18px;
+}
+
+.container {
+    position: relative;
+}
+
+#shadowtext {
+    position: absolute;
+    justify-self: center;
+    top: 0;
+    border: 5px solid transparent;
+    border-radius: 10px;
 }
