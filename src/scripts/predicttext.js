@@ -1,5 +1,4 @@
 function inputlistener(wordlist){
-    typedinput = [];
     const input = document.querySelector("#notetext");
     const shadowDisplay = document.querySelector("#shadowtext");
 
@@ -33,6 +32,7 @@ function inputlistener(wordlist){
                     e.preventDefault();
                     allWords[allWords.length - 1] = matches;
                     e.target.value = allWords.join(" ") + " ";
+                    shadowDisplay.textContent = "";
                 }
             } 
         });
