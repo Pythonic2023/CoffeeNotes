@@ -8,8 +8,7 @@ function inputlistener(wordlist){
             const val = e.target.value; // equals the whole string
             const allWords = e.target.value.split(/\s+/); // Words seperated by spaces placed into their own elements into the array
             const lastWord = allWords[allWords.length - 1].toLowerCase(); // last word of the array allWords
-            const lastWordLength = lastWord.length;
-            if (lastWordLength >= 1) {
+            if (lastWord.length > 1) {
                 const matches = wordlist.find(word => word.startsWith(lastWord)); // search our words array one by one comparing it to lastWord
                 if (matches) {
                     const lastWordIndex = val.length - lastWord.length;
@@ -26,13 +25,13 @@ function inputlistener(wordlist){
 
         input.addEventListener('keydown', function(e) {
             if (e.key === 'Tab'){
-                //const val = e.target.value;
+                const val = e.target.value;
                 const allWords = e.target.value.split(/\s+/); // Words seperated by spaces placed into their own elements into the array
                 const lastWord = allWords[allWords.length - 1].toLowerCase(); // last word of the array allWords
                 const matches = wordlist.find(word => word.startsWith(lastWord));
                 if (matches) {
+                    e.preventDefault();
                     allWords[allWords.length - 1] = matches;
-                    console.log(allWords);
                     e.target.value = allWords.join(" ") + " ";
                 }
             } 
@@ -62,4 +61,4 @@ async function getWordList() {
 
 getWordList();
 
-//inputlistener();
+
