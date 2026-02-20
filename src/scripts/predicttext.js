@@ -1,6 +1,8 @@
 function inputlistener(wordlist){
     const input = document.querySelector("#notetext");
     const shadowDisplay = document.querySelector("#shadowtext");
+    const position = input.value.length;
+    input.selectionEnd = position;
 
     if (input) {
         input.addEventListener('input', function(e) {
@@ -28,11 +30,16 @@ function inputlistener(wordlist){
                     e.preventDefault();
                     result.allWords[result.allWords.length - 1] = result.matches;
                     e.target.value = result.allWords.join(" ") + " ";
+                    e.target.selectionStart = e.target.value.length;
+                    e.target.selectionEnd = e.target.value.length;
                     shadowDisplay.textContent = "";
                 }
             } 
         });
-        
+
+        input.addEventListener('mouseup', function(e){
+            console.log(input.selectionEnd);
+        });
     }
 }
 
