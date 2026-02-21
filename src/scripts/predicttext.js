@@ -1,8 +1,6 @@
 function inputlistener(wordlist){
     const input = document.querySelector("#notetext");
     const shadowDisplay = document.querySelector("#shadowtext");
-    //const position = input.value.length;
-    //input.selectionEnd = position;
 
     if (input) {
         input.addEventListener('input', function(e) {
@@ -37,7 +35,7 @@ function inputlistener(wordlist){
             } 
         });
 
-        input.addEventListener('mouseup', function(e){
+        input.addEventListener('input', function(e){
             const result = analyzeString(e, wordlist);
             const text = input.value;
             const caretPosition = input.selectionStart;
@@ -56,7 +54,11 @@ function inputlistener(wordlist){
             
             const word = text.slice(start, end);
             result.lastWord = word;
-            result.allWords[]
+            console.log(result.lastWord);
+            const wordFind = wordlist.find(item => item.startsWith(word));
+            console.log(wordFind);
+            shadowDisplay.textContent = wordFind;
+
         });
     }
 }
