@@ -1,8 +1,8 @@
 function inputlistener(wordlist){
     const input = document.querySelector("#notetext");
     const shadowDisplay = document.querySelector("#shadowtext");
-    const position = input.value.length;
-    input.selectionEnd = position;
+    //const position = input.value.length;
+    //input.selectionEnd = position;
 
     if (input) {
         input.addEventListener('input', function(e) {
@@ -38,7 +38,25 @@ function inputlistener(wordlist){
         });
 
         input.addEventListener('mouseup', function(e){
-            console.log(input.selectionEnd);
+            const result = analyzeString(e, wordlist);
+            const text = input.value;
+            const caretPosition = input.selectionStart;
+            
+            let start = text.lastIndexOf(' ', caretPosition);
+            if (start === -1){
+                start = 0;
+            } else {
+                start = start + 1;
+            }
+
+            let end = text.indexOf(' ', caretPosition);
+            if (end === -1){
+                end = text.length;
+            }
+            
+            const word = text.slice(start, end);
+            result.lastWord = word;
+            result.allWords[]
         });
     }
 }
