@@ -91,9 +91,9 @@ function analyzeString(e, wordlist) {
 
     let end = val.indexOf(' ', caretPosition);
     if (end === -1) {
-        end = e.length;
+        end = val.length;
     } else {
-        end + e.length;
+        end = val.indexOf(' ', caretPosition);
     }
 
     const currentWord = val.slice(start, end);
