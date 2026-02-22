@@ -66,6 +66,11 @@ function inputlistener(wordlist){
                     shadowDisplay.textContent = "";
                 }
             }
+            
+            let word = text.slice(start, end);
+            
+            console.log(word);
+
         });
         */
     }
