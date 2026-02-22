@@ -3,6 +3,7 @@ function inputlistener(wordlist){
     const shadowDisplay = document.querySelector("#shadowtext");
 
     if (input) {
+
         input.addEventListener('input', function(e) {
 
             const result = analyzeString(e, wordlist);
@@ -34,32 +35,39 @@ function inputlistener(wordlist){
                 }
             } 
         });
-
+/*
         input.addEventListener('input', function(e){
             const result = analyzeString(e, wordlist);
-            const text = input.value;
-            const caretPosition = input.selectionStart;
-            
-            let start = text.lastIndexOf(' ', caretPosition);
-            if (start === -1){
-                start = 0;
-            } else {
-                start = start + 1;
-            }
+            //const text = input.value;
+            //const caretPosition = input.selectionStart;
+            console.log('Click event ran');
+            console.log(word);
+            if (text) {
+                start = text.lastIndexOf(' ', caretPosition);
+                if (start === -1){
+                    start = 0;
+                } else {
+                    start = start + 1;
+                }
 
-            let end = text.indexOf(' ', caretPosition);
-            if (end === -1){
-                end = text.length;
+                end = text.indexOf(' ', caretPosition);
+                if (end === -1){
+                    end = text.length;
+                }
+                
+                const word = text.slice(start, end);
+                result.lastWord = word;
+                console.log(result.lastWord);
+                const wordFind = wordlist.find(item => item.startsWith(word));
+                if (word) {
+                    console.log(wordFind);
+                    shadowDisplay.textContent = wordFind;
+                } else {
+                    shadowDisplay.textContent = "";
+                }
             }
-            
-            const word = text.slice(start, end);
-            result.lastWord = word;
-            console.log(result.lastWord);
-            const wordFind = wordlist.find(item => item.startsWith(word));
-            console.log(wordFind);
-            shadowDisplay.textContent = wordFind;
-
         });
+        */
     }
 }
 
@@ -68,12 +76,36 @@ function analyzeString(e, wordlist) {
     const allWords = e.target.value.split(/\s+/); // Words seperated by spaces placed into their own elements into the array
     const lastWord = allWords[allWords.length - 1].toLowerCase(); // last word of the array allWords
     const matches = wordlist.find(word => word.startsWith(lastWord)); // search our words array one by one comparing it to lastWord
-    
+    let caretPosition = e.selectionStart;
+    let start = val.lastIndexOf(' ', caretPosition);
+    if (start === -1) {
+        start = 0;
+    } else {
+        start = start + 1;
+    }
+
+    let end = val.indexOf(' ', caretPosition);
+    if (end === -1) {
+        end = e.length;
+    } else {
+        end + e.length;
+    }
+
+    const currentWord = val.slice(start, end);
+    console.log(currentWord);
+
+    console.log(start);
+    console.log(end);
+
+
     return {
         val: val,
         matches: matches,
         allWords: allWords,
-        lastWord: lastWord
+        lastWord: lastWord,
+        caretPosition: caretPosition,
+        start: start,
+        end: end, 
     };
 }
 
