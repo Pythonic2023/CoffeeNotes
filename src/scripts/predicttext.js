@@ -89,11 +89,11 @@ function analyzeString(e, wordlist) {
         start = start + 1;
     }
 
-    let end = val.indexOf(' ', caretPosition);
+    let end = val.indexOf(' ', caretPosition + 1);
     if (end === -1) {
         end = val.length;
     } else {
-        end = val.indexOf(' ', caretPosition);
+        end = end + 1;
     }
 
     const currentWord = val.slice(start, end);
